@@ -1,0 +1,16 @@
+
+.wave {
+    display: inline-block;
+    font-size: 2rem;
+    animation: wave-animation 1.5s infinite ease-in-out;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    </style>
+</head>
+<body>
+    <div class="w-full bg-zinc-800 text-white flex justify-end p-3 flex-wrap">
+        <a class=" mr-5 inline-block bg-red-500 px-3 rounded-lg py-2 mt-3" href="/logout">Logout</a>
+    <div class="w-full min-h-screen bg-zinc-800 text-white flex flex-col items-center justify-center">
+        <h5 class="text-4xl font-bold text-mono hover:text-rose-700 tracking-tighter text-black drop-shadow-[0_0_17px_rgba(180,90,255,5)] mb-3">
+            Edit your Post
+        </h5>
+        <form action="/update/<%= post._id %>" method="post">
+            <textarea class="w-full focus:ring-2 focus:ring-purple-500 p-5 rounded-lg outline-none border-2 border-zinc-700 mt-4 bg-transparent" rows="6" cols="100" placeholder="What's on your mind..." name="content">
+                <%= post.content %>
+            </textarea>
+            <input class="w-full p-2 mt-4 bg-purple-800 text-black text-l tracking-tighter text-mono font-bold border hover:drop-shadow-[0_0_17px_rgba(0,0,0,5)] border-zinc-600 rounded-md cursor-pointer" type="submit" value="Update Post">
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
+
